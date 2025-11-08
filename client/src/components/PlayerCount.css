@@ -1,0 +1,25 @@
+.player-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0f0f0;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+}
+
+.player-count-icon {
+  font-size: 1.5rem;
+}
+
+.player-count-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.player-count-value {
+  color: #667eea;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
