@@ -1,0 +1,153 @@
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #f0f0f0;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.grid-row {
+  display: flex;
+  gap: 4px;
+}
+
+.grid-cell {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.grid-cell:hover:not(.occupied):not(.disabled) {
+  background: #e3f2fd;
+  border-color: #2196f3;
+  transform: scale(1.05);
+}
+
+.grid-cell.occupied {
+  background: #e8f5e9;
+  border-color: #4caf50;
+  cursor: default;
+}
+
+.grid-cell.selected {
+  background: #fff3e0;
+  border-color: #ff9800;
+  border-width: 3px;
+  transform: scale(1.1);
+}
+
+.grid-cell.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.grid-cell.disabled:hover {
+  transform: none;
+  background: white;
+  border-color: #ddd;
+}
+
+.input-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.input-modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  min-width: 300px;
+  max-width: 90%;
+}
+
+.input-modal-content h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.input-modal-content p {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.input-modal-content input {
+  width: 100%;
+  padding: 12px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-family: inherit;
+}
+
+.input-modal-content input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.input-modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.input-modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.input-modal-buttons button:first-child {
+  background: #667eea;
+  color: white;
+}
+
+.input-modal-buttons button:first-child:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.input-modal-buttons button:first-child:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.input-modal-buttons button:last-child {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.input-modal-buttons button:last-child:hover {
+  background: #e0e0e0;
+}
+
